@@ -1,9 +1,9 @@
 [![XX](https://img.shields.io/badge/XX-github-blue?logo=github)](https://github.com/XX)
 
-I'm currently pursuing a Master's degree in XX at the Department of XX, XX University, XX.
+I'm currently pursuing a Bachelor's degree in engineer at the Department of XX, Xidian University, XX.
 
 #### Email  
-<code>XX@XX.XX</code>  
+<code>1470437329@qq.com</code>  
 <code>XX@XX.XX</code>
 
 #### Education  
