@@ -3,4 +3,5 @@ source "https://rubygems.org"
 
 
 gem "github-pages", group: :jekyll_plugins
-gem "minimal-mistakes-jekyll", "~> 4.27.3"
+gem "jekyll-remote-theme"
+gem 'faraday-retry'
