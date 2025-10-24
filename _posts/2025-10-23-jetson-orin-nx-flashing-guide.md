@@ -12,7 +12,7 @@ toc: true
 toc_label: "目录"
 toc_sticky: true
 header:
-  teaser: /assets/images/jetson-flashing-guide/500px-LOGIN水印-3.jpg
+  teaser: /assets/images/jetson-flashing-guide/fengmian.jpg
 ---
 
 本教程将指导您如何在 Ubuntu 20.04 系统下为 Jetson Orin NX 刷机并启用 Super 模式。

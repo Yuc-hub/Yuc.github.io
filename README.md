@@ -1,3 +1,20 @@
+更改主题来源后：（github page使用remote theme）
+bundle install
+bundle exec jekyll build    # 做一次构建检查
+本地浏览器查看页面效果运行
+bundle exec jekyll serve --livereload  
+本地预览（浏览器访问 http://127.0.0.1:4000）
+
+发布新的blog
+在 _posts/ 下增加blog的 .md 文档
+相关附件放到assets/里面
+
+新增页面先编辑  _data/navigation.yml
+ 然后在 _pages/ 里面增加page.md
+
+
+
+
 # [Minimal Mistakes Jekyll theme](https://mmistakes.github.io/minimal-mistakes/)
 
 [![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/mmistakes/minimal-mistakes/master/LICENSE)
