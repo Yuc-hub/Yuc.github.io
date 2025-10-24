@@ -15,7 +15,7 @@ header:
   teaser: /assets/images/jetson-flashing-guide/fengmian.jpg
 ---
 
-本教程将指导您如何在 Ubuntu 20.04 系统下为 Jetson Orin NX 刷机并启用 Super 模式。
+本教记录如何在 Ubuntu 20.04 系统下为 Jetson Orin NX 刷机并启用 Super 模式。
 
 ## 准备工作
 
@@ -65,7 +65,7 @@ sudo apt --fix-broken install
 - 终端运行 SDK Manager
 - 点击 LOGIN，使用 NVIDIA 账号登录
 
-![SDK Manager 登录界面](/assets/images/jetson-flashing-guide/500px-LOGIN水印-3.jpg)
+![SDK Manager 登录界面](/assets/images/jetson-flashing-guide/fengmian.jpg)
 
 ### 3. 下载系统
 
