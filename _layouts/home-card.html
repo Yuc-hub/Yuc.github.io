@@ -1,0 +1,33 @@
+---
+layout: archive
+---
+
+{{ content }}
+
+<div class="posts-card">
+  {% for post in site.posts %}
+    <article class="post-card" onclick="window.location='{{ post.url | relative_url }}'">
+      <div class="post-card-image">
+        {% if post.header.teaser %}
+          <img src="{{ post.header.teaser | relative_url }}" alt="{{ post.title }}">
+        {% endif %}
+      </div>
+      <div class="post-card-content">
+        <h2 class="post-card-title">{{ post.title }}</h2>
+        <p class="post-card-excerpt">
+          {{ post.excerpt | strip_html | truncatewords: 30 }}
+        </p>
+        <div class="post-card-meta">
+          <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+          {% if post.categories %}
+            <span class="post-card-categories">
+              {% for category in post.categories %}
+                {{ category }}
+              {% endfor %}
+            </span>
+          {% endif %}
+        </div>
+      </div>
+    </article>
+  {% endfor %}
+</div>
