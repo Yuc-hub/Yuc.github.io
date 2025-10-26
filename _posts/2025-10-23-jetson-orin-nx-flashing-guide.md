@@ -35,11 +35,11 @@ header:
 > https://www.yahboom.com/study/Jetson-Orin-NX 
 > 提取密码：ntgy
 
-![虚拟机下载页面](/assets/images/jetson-flashing-guide/image-20250701163820293.png)
+  ![虚拟机下载页面]({{ '/assets/images/jetson-flashing-guide/image-20250701163820293.png' | relative_url }})
 
 输入提取码后刷新网站即可下载虚拟机镜像。
 
-![下载虚拟机](/assets/images/jetson-flashing-guide/image-20250701163921159.png)
+  ![下载虚拟机]({{ '/assets/images/jetson-flashing-guide/image-20250701163921159.png' | relative_url }})
 
 下载完成后解压，使用 VMware 打开。建议在虚拟机设置中分配 8GB 内存。
 
@@ -65,21 +65,21 @@ sudo apt --fix-broken install
 - 终端运行 SDK Manager
 - 点击 LOGIN，使用 NVIDIA 账号登录
 
-![SDK Manager 登录界面](/assets/images/jetson-flashing-guide/500px-LOGIN水印-3.jpg)
+  ![SDK Manager 登录界面]({{ '/assets/images/jetson-flashing-guide/fengmian.jpg' | relative_url }})
 
 ### 3. 下载系统
 
 从 [Jetpack 存档](https://developer.nvidia.com/embedded/jetpack-archive) 下载所需版本。**注意 Ubuntu 和 JetPack 版本对应关系**。本教程使用 Ubuntu 20.04 对应的 JetPack 5.1.5。
 
-![JetPack 版本选择](/assets/images/jetson-flashing-guide/image-20250630135050222.png)
+  ![JetPack 版本选择]({{ '/assets/images/jetson-flashing-guide/image-20250630135050222.png' | relative_url }})
 
 好消息是，JetPack 5.1.5 已支持在 Ubuntu 20.04 上启用 Super 模式，可以将功耗从 25W 提升至 40W，显著提升性能。
 
-![性能提升说明](/assets/images/jetson-flashing-guide/image-20250701165410103.png)
+  ![性能提升说明]({{ '/assets/images/jetson-flashing-guide/image-20250701165410103.png' | relative_url }})
 
 选择版本后，在 Jetson Linux Page 页面下载这两个文件：
 
-![下载必要文件](/assets/images/jetson-flashing-guide/image-20250701165635508.png)
+  ![下载必要文件]({{ '/assets/images/jetson-flashing-guide/image-20250701165635508.png' | relative_url }})
 
 下载后执行解压和准备命令：
 
@@ -93,9 +93,9 @@ sudo ./tools/l4t_flash_prerequisites.sh
 
 替换文件名示例：
 
-![L4T Release Package](/assets/images/jetson-flashing-guide/image-20250701172219673.png)
+  ![L4T Release Package]({{ '/assets/images/jetson-flashing-guide/image-20250701172219673.png' | relative_url }})
 
-![Sample FS Package](/assets/images/jetson-flashing-guide/image-20250701172234629.png)
+  ![Sample FS Package]({{ '/assets/images/jetson-flashing-guide/image-20250701172234629.png' | relative_url }})
 
 > 详细步骤参考[官方教程](https://docs.nvidia.com/jetson/archives/r35.6.2/DeveloperGuide/IN/QuickStart.html)
 
@@ -125,7 +125,7 @@ sudo ./tools/l4t_flash_prerequisites.sh
 
 Recovery 模式下风扇不会转动：
 
-![Recovery 模式示意](/assets/images/jetson-flashing-guide/image-20250701171326012.png)
+  ![Recovery 模式示意]({{ '/assets/images/jetson-flashing-guide/image-20250701171326012.png' | relative_url }})
 
 ### 5. 系统烧录
 
@@ -134,7 +134,7 @@ Recovery 模式下风扇不会转动：
 
 Orin NX 和 Orin Nano 使用相同配置：
 
-![Super 配置文件](/assets/images/jetson-flashing-guide/image-20250630153258309.png)
+  ![Super 配置文件]({{ '/assets/images/jetson-flashing-guide/image-20250630153258309.png' | relative_url }})
 
 使用以下命令进行烧录：
 
@@ -144,15 +144,15 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
   --showlogs --network usb0 --erase-all jetson-orin-nano-devkit-super internal
 ```
 
-![烧录选项说明](/assets/images/jetson-flashing-guide/image-20250701172428566.png)
+  ![烧录选项说明]({{ '/assets/images/jetson-flashing-guide/image-20250701172428566.png' | relative_url }})
 
 烧录过程中注意及时连接设备，避免超时：
 
-![等待连接设备](/assets/images/jetson-flashing-guide/image-20250120155459747.png)
+  ![等待连接设备]({{ '/assets/images/jetson-flashing-guide/image-20250120155459747.png' | relative_url }})
 
 烧录完成后风扇会开始转动。断电重启即可进入系统：
 
-![烧录完成](/assets/images/jetson-flashing-guide/image-20250120155405246.png)
+  ![烧录完成]({{ '/assets/images/jetson-flashing-guide/image-20250120155405246.png' | relative_url }})
 
 **常见问题：**
 - 卡在 "sending bct"
@@ -183,18 +183,18 @@ sudo systemctl status ssh
 
 SDK Manager 会识别到设备：
 
-![SDK Manager 识别设备](/assets/images/jetson-flashing-guide/image-20250709133345299.png)
+  ![SDK Manager 识别设备]({{ '/assets/images/jetson-flashing-guide/image-20250709133345299.png' | relative_url }})
 
 注意事项：
 - 取消勾选 "Host Machine"（避免下载不必要的 CUDA 环境）
 - Target Hardware 可自动匹配（注意选择正确的内存版本）
 - 选择之前使用的 JetPack 版本
 
-![SDK 配置选择](/assets/images/jetson-flashing-guide/image-20250709133531253.png)
+  ![SDK 配置选择]({{ '/assets/images/jetson-flashing-guide/image-20250709133531253.png' | relative_url }})
 
 确认状态为 Recovery 模式后继续：
 
-![确认 Recovery 状态](/assets/images/jetson-flashing-guide/image-20250701173815250.png)
+  ![确认 Recovery 状态]({{ '/assets/images/jetson-flashing-guide/image-20250701173815250.png' | relative_url }})
 
 因为已经手动安装了系统，取消勾选 "Jetson Linux"，同意协议后点击 "CONTINUE"。
 
@@ -203,6 +203,6 @@ SDK Manager 会识别到设备：
 2. 输入系统账户名和密码
 3. IP Address 保持默认 (192.168.55.1)
 
-![SSH 配置](/assets/images/jetson-flashing-guide/image-20250701174019209.png)
+  ![SSH 配置]({{ '/assets/images/jetson-flashing-guide/image-20250701174019209.png' | relative_url }})
 
 等待安装完成。注意监控设备温度，过热可能导致失败。
