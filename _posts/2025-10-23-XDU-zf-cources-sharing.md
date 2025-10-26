@@ -1,5 +1,5 @@
 ---
-title: " 西电中法班课程资料分享"
+title: "西电中法班课程资料分享"
 date: 2025-10-24
 categories:
   - 学习资源
@@ -12,11 +12,10 @@ toc: true
 toc_label: "目录"
 toc_sticky: true
 header:
-  # teaser: /assets/images/course-materials/github-repo.jpg
+  teaser: /assets/images/cources-sharing/teaser.jpg
 ---
 
-# 大学课程资料分享：GitHub仓库开放下载
-
+# 大学课程资料分享：
 > 知识因分享而更有价值
 
 ## 📚 关于这个项目

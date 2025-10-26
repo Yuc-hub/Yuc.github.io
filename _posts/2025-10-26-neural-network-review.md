@@ -192,13 +192,13 @@ GoogLeNet 总共有22层，由 9 个 Inception v1 模块和 5 个池化层以及
 
   为了既保持网络结构的稀疏性，又能利用密集矩阵的高计算性能，GoogLeNet提出了一种并联结构，Inception网络结构。其主要思想是寻找用密集成分来近似最优局部稀疏连接，通过构造一种"基础神经元"结构，来搭建一个稀疏性、高计算性能的网络结构。
 
-<img src="{{ "/assets/images/neural-network-review/image-20250306112237329.png" | relative_url }}" alt="inception结构" style="zoom:67%;" />
+<img src="{{ '/assets/images/neural-network-review/image-20250306112237329.png' | relative_url }}" alt="inception结构" style="zoom:67%;" />
 
 - 辅助分类器（Auxiliary Classifier）
 
   网络主干右边的两个分支就是辅助分类器，他们也能预测图片的类别，其结构一模一样。它确保了即便是隐藏单元和中间层也参与了特征计算，在inception网络中起到一种调整的效果，避免梯度消失。
 
-<img src="{{ "/assets/images/neural-network-review/image-20250306112254129.png" | relative_url }}" alt="辅助分类器" style="zoom:67%;" />
+<img src="{{ '/assets/images/neural-network-review/image-20250306112254129.png' | relative_url }}" alt="辅助分类器" style="zoom:67%;" />
 
 **优缺点：**
 
@@ -264,7 +264,7 @@ RNN用于处理序列数据。在传统的神经网络模型中，是从输入�
 
 按时间线将循环神经网络展开，这个网络在t时刻接收到输入 x~t 之后，隐藏层的值是st ，输出值是 ot 。关键一点是， st 的值不仅仅取决于 xt ，还取决于 st−1 。我们可以用下面的公式来表示**循环神经网络**的计算方法：
 
-<img src="{{ "/assets/images/neural-network-review/rnn-formula.jpg" | relative_url }}" alt="RNN公式" style="zoom: 33%;" />
+<img src="{{ '/assets/images/neural-network-review/rnn-formula.jpg' | relative_url }}" alt="RNN公式" style="zoom: 33%;" />
 
 表达得更直观的图有：
 
@@ -301,11 +301,11 @@ RNN用于处理序列数据。在传统的神经网络模型中，是从输入�
 
 LSTM 同样是这样的结构，但是重复的模块拥有一个不同的结构。不同于 单一神经网络层，这里是有四个，以一种非常特殊的方式进行交互。
 
-<img src="{{ "/assets/images/neural-network-review/lstm-structure.png" | relative_url }}" alt="LSTM结构" style="zoom:80%;" />                         
+<img src="{{ '/assets/images/neural-network-review/lstm-structure.png' | relative_url }}" alt="LSTM结构" style="zoom:80%;" />                         
 
 LSTM 中的重复模块包含四个交互的层。
 
-<img src="{{ "/assets/images/neural-network-review/lstm-detailed.png" | relative_url }}" alt="LSTM详细结构" style="zoom: 80%;" />                          
+<img src="{{ '/assets/images/neural-network-review/lstm-detailed.png' | relative_url }}" alt="LSTM详细结构" style="zoom: 80%;" />                          
 
 在上面的图例中，每一条黑线传输着一整个向量，从一个节点的输出到其他节点的输入。粉色的圈代表 pointwise 的操作，诸如向量的和，而黄色的矩阵就是学习到的神经网络层。合在一起的线表示向量的连接，分开的线表示内容被复制，然后分发到不同的位置。
 
@@ -317,7 +317,7 @@ LSTM 的关键就是细胞状态（cell），水平线在图上方贯穿运行�
 
 LSTM 有通过精心设计的称作为"门"的结构来去除或者增加信息到细胞状态的能力。门是一种让信息选择式通过的方法。他们包含一个 sigmoid 神经网络层和一个 pointwise 乘法操作。 
 
-<img src="{{ "/assets/images/neural-network-review/lstm-sigmoid.png" | relative_url }}" alt="LSTM Sigmoid层" style="zoom:67%;" />
+<img src="{{ '/assets/images/neural-network-review/lstm-sigmoid.png' | relative_url }}" alt="LSTM Sigmoid层" style="zoom:67%;" />
 
 Sigmoid 层输出 0 到 1 之间的数值，描述每个部分有多少量可以通过。0 代表"不许任何量通过"，1 就指"允许任意量通过"！
 
@@ -325,22 +325,22 @@ LSTM中有3个控制门：输入门，输出门，记忆门。
 
 （1）forget gate：选择忘记过去某些信息：
 
-<img src="{{ "/assets/images/neural-network-review/lstm-forget-gate.gif" | relative_url }}" alt="遗忘门" style="zoom:67%;" />
+<img src="{{ '/assets/images/neural-network-review/lstm-forget-gate.gif' | relative_url }}" alt="遗忘门" style="zoom:67%;" />
 
 （2）input gate：记忆现在的某些信息：
 
-<img src="{{ "/assets/images/neural-network-review/lstm-input-gate.gif" | relative_url }}" alt="输入门" style="zoom:67%;" />
+<img src="{{ '/assets/images/neural-network-review/lstm-input-gate.gif' | relative_url }}" alt="输入门" style="zoom:67%;" />
 
 （3） 将过去与现在的记忆进行合并：
 
-<img src="{{ "/assets/images/neural-network-review/lstm-merge.gif" | relative_url }}" alt="记忆合并" style="zoom:67%;" />
+<img src="{{ '/assets/images/neural-network-review/lstm-merge.gif' | relative_url }}" alt="记忆合并" style="zoom:67%;" />
 
 （4）output gate：输出
 
-<img src="{{ "/assets/images/neural-network-review/lstm-output-gate.gif" | relative_url }}" alt="输出门" style="zoom:67%;" />
+<img src="{{ '/assets/images/neural-network-review/lstm-output-gate.gif' | relative_url }}" alt="输出门" style="zoom:67%;" />
 
 公式总结：                                  
-<img src="{{ "/assets/images/neural-network-review/lstm-formula.png" | relative_url }}" alt="LSTM公式总结" style="zoom:67%;" />
+<img src="{{ '/assets/images/neural-network-review/lstm-formula.png' | relative_url }}" alt="LSTM公式总结" style="zoom:67%;" />
 
                                                               
 
