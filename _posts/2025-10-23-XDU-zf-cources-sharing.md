@@ -1,6 +1,6 @@
 ---
 title: "西电中法班课程资料分享"
-date: 2025-10-24
+date: 2025-10-22
 categories:
   - 学习资源
 tags:

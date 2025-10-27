@@ -1,6 +1,6 @@
 ---
 title: "Jetson Orin NX  烧录 Ubuntu 20.04 和升级 Super 模式指南"
-date: 2025-10-23
+date: 2025-10-25
 categories:
   - 教程
 tags:
